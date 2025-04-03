@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about" onclick="toggleSection('about')">About Me</a></li>
+                <li><a href="#projects" onclick="toggleSection('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="toggleSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Visitor...</p>
+    </section>
+
+    <section id="about" class="section-content">
+        <h2>About Me</h2>
+        <p>Evit Software and App Design student,,.</p>
+    </section>
+
+    <section id="projects" class="section-content">
+        <h2>My Projects</h2>
+        <div class="tabs">
+            <ul class="tab-links">
+                <li><a href="javascript:void(0)" class="active" onclick="openTab(event, 'project1')">Zig QuickPrint</a></li>
+                <li><a href="javascript:void(0)" onclick="openTab(event, 'project2')">QuickTool FWall</a></li>
+                <li><a href="javascript:void(0)" onclick="openTab(event, 'project3')">QuickTool Scanner</a></li>
+            </ul>
+        </div>
+
+<div id="project1" class="tab-content">
+    <h3>Project 1 - Zig Example</h3>
+    <p>This is an overview of garbage with some Zig code:</p>
+
+    <!-- Copy Button -->
+    <button class="copy-btn" onclick="copyCode('zig-code1')">RipOff Code</button>
+
+    <!-- Code Block with the 'language-zig' class for syntax highlighting -->
+    <pre><code id="zig-code1" class="language-zig">
+const std = @import("std");
+const time = std.time.milliTimestamp;
+const StOutput = std.io.getStdOut().writer();
+const g: i32 = 1_000_000;
+var bw = std.io.bufferedWriter(StOutput);
+const writer = bw.writer();
+
+pub fn main() !void
+{
+    const start_time = time();
+
+    var i: usize = 0;
+    while (i <= g) : (i += 1)
+    {
+        try writer.print("{s}{}\n", .{".ic ",i});
+    }
+
+    try bw.flush();
+
+    const end_time = time();
+    const dur: f64 = @as(f64, @floatFromInt(end_time - start_time)) / 1000;
+    try writer.print("{d}s {}ms {}ms\n", .{ dur, start_time, end_time });
+    try bw.flush();
+}
+    </code></pre>
+</div>
+
+
+
+        <div id="project2" class="tab-content" style="display:none">
+            <h3>Garbage 2</h3>
+            <p>This is an overview of a firewall checker quicktool:</p>
+            <pre><code class="language-python">
+import subprocess
+
+def check_firewall_rules():
+    result = subprocess.run(['ufw', 'status'], stdout=subprocess.PIPE)
+    if 'ALLOW' in result.stdout.decode():
+        print("Firewall rules are in place.")
+    else:
+        print("No firewall rules found.")
+
+if __name__ == "__main__":
+    check_firewall_rules()
+</code></pre>
+        </div>
+
+        <div id="project3" class="tab-content" style="display:none">
+            <h3>Garbage 3</h3>
+            <p>This is an overview of a port Scanner quick tool:</p>
+            <pre><code class="language-bash">#!/bin/bash
+echo "Enter IP to scan:"
+read ip
+
+for port in {1..1024}; do
+    nc -z -v -w1 $ip $port 2>&1 | grep succeeded &
+done
+wait
+}</code></pre>
+        </div>
+    </section>
+
+    <section id="contact" class="section-content">
+        <h2>Dont Contact Me</h2>
+        <p>:</p>
+        <ul>
+            <li>Email: Not Yet</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/daniil-teterev-31847432a/">Here</a></li>
+            <li>GitHub: <a href="https://github.com/Tutochka">Here</a></li>
+        </ul>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="scripts.js"></script>
+</bo

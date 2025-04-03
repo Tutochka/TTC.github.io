@@ -1,0 +1,162 @@
+/* General resets and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace; /* A coder-friendly font */
+    line-height: 1.6;
+    background-color: #1e1e1e; /* Dark background */
+    color: #dcdcdc; /* Light gray text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #1e90ff; /* Light blue links for visibility */
+}
+
+a:hover {
+    color: #ff6347; /* Hover color */
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Hero section styles */
+#hero {
+background: #111;
+color: white;
+text-align: center;
+padding: 100px 0;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#hero h1 {
+font-size: 3em;
+color: #dcdcdc;
+}
+
+#hero p {
+font-size: 1.5em;
+color: #bbb;
+}
+
+/* Section content styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    display: block;
+    background: #2b2b2b; /* Dark background for sections */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: #fff;
+}
+
+/* Tab styles for Projects */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.tab-links li {
+    margin-right: 20px;
+}
+
+.tab-links li a {
+    color: #1e90ff;
+    font-size: 1.2em;
+    padding: 5px 15px;
+    border: 2px solid #1e90ff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tab-links li a:hover,
+.tab-links li a.active {
+    background-color: #1e90ff;
+    color: white;
+}
+
+/* Code syntax highlighting */
+pre, code {
+    background-color: #2e2e2e; /* Dark background for code blocks */
+    color: #dcdcdc; /* Light gray text */
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+pre {
+    padding: 20px;
+}
+
+/* Footer styles */
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* For debugging: temporarily remove transition effects */
+.section-content {
+    display: block;
+    background: #2b2b2b;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
