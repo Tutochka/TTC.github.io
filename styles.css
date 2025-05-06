@@ -28,6 +28,7 @@ a:hover {
 /* Header styles */
 header {
     background: #333;
+    position: sticky;
     color: #fff;
     padding: 10px 0;
     text-align: center;
